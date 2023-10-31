@@ -1,0 +1,39 @@
+#login-division{
+    text-align: center;
+    margin: 140px auto;
+    
+    border: 2px solid rgb(169, 168, 168);
+    border-radius: 20px;
+    box-shadow: 2px 3px 6px 5px #888;
+    
+    width: 380px;
+    height: 160px;
+
+}
+
+.input-item{
+    margin: 10px;
+}
+
+label{
+    display: inline-block; 
+    width: 85px;
+}
+
+label, h3 {
+    color: #8ea7ca;
+}
+
+#buttoon{
+    color:white;
+    background-color: #8ea7ca;
+    width:65px;
+    height:25px;
+    border:0px;
+    border-radius:20px ;
+
+}
+
+.input-field{
+    border-color:snow;
+}
