@@ -1,18 +1,18 @@
 <div id="login-division">
     <h3>LOGIN</h3>
-    <form id="login-form">
+    <form [formGroup]="form" (ngSubmit)="onLogin()">
 
         <div class="input-item">
             <label for="username">Username:</label>
-            <input type="username" name="username" required class="input-field">
+            <input type="username" name="username" formControlName="email" class="input-field">
         </div>
 
         <div class="input-item">
             <label for="password">Password:</label>
-            <input type="password" name="password" required class="input-field">
+            <input type="password" name="password" formControlName="password" class="input-field">
         </div>
 
-        <button type="submit" (click)="onLogin()">Login</button>
+        <button type="submit">Login</button>
         <!-- <input type="submit" value="Login!" id="buttoon"> -->
 
     </form>
