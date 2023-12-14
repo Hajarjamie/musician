@@ -1,3 +1,55 @@
-<p>dashboard-layout works!</p>
+<mat-drawer-container [class.drawer-opened]="drawer.opened">
+    <mat-drawer #drawer class="drawer" mode="side" opened="true">
+   
+      <mat-toolbar class="header">
+        <img src="C:\Users\mdxra\Desktop\Angular_full_color_logo.svg.png" alt="LoGo">
+        <mat-icon class="close" (click)="drawer.close()">close</mat-icon>
+      </mat-toolbar>
+      <div class="contents">
+        <div class="p-5">
+          <!-- Drawer begins from here -->
+          <mat-list role="list">
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink='artist/list'>
+              <div class="labelNames">Artists List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="band/list">
+              <div class="labelNames">Band List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="concert-band/list">
+              <div class="labelNames">Concert Band List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="concert/list">
+              <div class="labelNames">Concert List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="instrument/list">
+              <div class="labelNames">Instrument List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="role-instrument/list">
+              <div class="labelNames">Role Instrument List</div>
+            </mat-list-item>
+            <mat-list-item class="!cursor-pointer" role="listitem" routerLink="role/list">
+              <div class="labelNames">Role List</div>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+    </mat-drawer>
+   
+    <mat-toolbar class="main header">
+      <mat-icon *ngIf="!drawer.opened" (click)="drawer.toggle()">
+        menu
+      </mat-icon>
+      <div>Musician</div>
+    </mat-toolbar>
+   
+    <div class="main contents">
+      <div class="mt">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+   
+    <mat-toolbar class="main footer">
+      Copyright © 2023 - All rights reserved
+    </mat-toolbar>
+  </mat-drawer-container>
 
-<router-outlet></router-outlet>

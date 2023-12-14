@@ -1,0 +1,48 @@
+*{
+    text-shadow: none;
+  }
+  .drawer {
+    position: absolute;
+    height: 100vh;
+    min-width: 10%;
+    border-right: 1px solid #ccc;
+  }
+  .drawer .header {
+    position: absolute;
+    right: 0;
+    justify-content: space-between;
+  }
+  .drawer .contents {
+    padding: 16px;
+    margin-top: 60px;
+  }
+   
+  .main {
+    background-color: #fff;
+  }
+   
+  .main.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    border-bottom: 1px solid #ccc;
+  }
+   
+  .main.contents {
+    min-height: 100vh;
+    margin-top: 64px;
+    padding: 16px;
+  }
+   
+  .main.footer {
+    position: fixed;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+    width: 100%;
+  }
+   
+  .c-pointer {
+    cursor: pointer !important;
+  }
+   

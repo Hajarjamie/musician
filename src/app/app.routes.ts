@@ -17,6 +17,23 @@ export const routes: Routes = [
             {
                 path: 'home',
                 loadComponent: () => import('./pages/home/home.component').then((c) => c.HomeComponent)
+            },
+            {
+                path: 'artist',
+                children: [
+                    {
+                        path: 'list',
+                        loadComponent: () => import('./pages/artist/artist-list/artist-list.component').then((c) => c.ArtistListComponent)
+                    },
+                    {
+                        path: 'new',
+                        loadComponent: () => import('./pages/artist/artist-detail/artist-detail.component').then((c) => c.ArtistDetailComponent)
+                    },
+                    {
+                        path: ':id',
+                        loadComponent: () => import('./pages/artist/artist-detail/artist-detail.component').then((c) => c.ArtistDetailComponent)
+                    }
+                ]
             }
         ]
     }
