@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
+import { DxButtonModule } from 'devextreme-angular/ui/button';
+
 
 
 @NgModule({
@@ -11,10 +13,13 @@ import { RouterModule } from '@angular/router';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    DxButtonModule,
   ],
   exports: [
     ReactiveFormsModule
   ]
 })
 export class SharedModule { }
+export class AppModule { }
+
