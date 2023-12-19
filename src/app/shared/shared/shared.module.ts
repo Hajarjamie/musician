@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import { DxButtonModule } from 'devextreme-angular/ui/button';
+import { DxDataGridModule } from 'devextreme-angular';
+
 
 
 
@@ -15,11 +17,14 @@ import { DxButtonModule } from 'devextreme-angular/ui/button';
     ReactiveFormsModule,
     MatSidenavModule,
     DxButtonModule,
+    DxDataGridModule,
+
   ],
   exports: [
     ReactiveFormsModule
   ]
 })
 export class SharedModule { }
-export class AppModule { }
+
+
 
